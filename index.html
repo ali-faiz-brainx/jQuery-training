@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="jquery-steps.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.steps@1.1.1/dist/jquery-steps.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f9229cd27b.js" crossorigin="anonymous"></script>
+
+    <!-- Moment JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"
+        integrity="sha512-Dz4zO7p6MrF+VcOD6PUbA08hK1rv0hDv/wGuxSUjImaUYxRyK2gLC6eQWVqyDN9IM1X/kUA8zkykJS/gEVOd3w=="
+        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment-with-locales.min.js"
+        integrity="sha512-lQR9pLx+zmyQV/T99+vuBITpGAYXR+nMAZXVjtdEgnC3jodfmtjhRTuAnQ7jHjlWgUL0KE+SORFWdWEp1BYLFw=="
+        crossorigin="anonymous"></script>
+
+        <!-- Steps Jquery -->
+    <!-- <script src="jquery.steps.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery.steps@1.1.1/dist/jquery-steps.min.js"></script>
+
+    <!-- Index js -->
+    <script src="index.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+    
+    <title>Freshly</title>
+</head>
+<body>
+    <!-- Main Div -->
+    <div id="freshly-main-div" class="step-app">
+        <ul class="step-steps text-center">
+            <li data-step-target="step1">Plans & Menue</li>
+            <li data-step-target="step2">Select Days</li>
+            <li data-step-target="step3">Meals</li>
+            <li data-step-target="step4">CheckOut</li>
+        </ul>
+        <div class="step-content">
+            <!-- plan and menu -->
+            <section class="step-tab-panel container-fluid" data-step="step1">
+                <div class="container-fluid bg-light">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <div class="display-1 heading">PLANS AND MENU</div>
+                        </div>
+                        <div class="col-12 text-center mt-2">
+                            <div class="desc">Each Freshly meal is one serving, for one person, at one sitting.</div>
+                        </div>
+                    </div>
+                    <div class="row text-center my-4">
+                        <div class="col">
+                            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f0c8e593ca544afcf2f939f_meal-sleeve_3x_rypa38-p-500.png"
+                            alt="" class="img-h">
+                            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f0c8ebcd2d2803042476949_greenarrow.png"
+                            alt="" class="arrow">
+                            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f0c8e59ce436094acd6545f_tray-meal_3x_ni4ilo.png"
+                            alt="" class="img-h">
+                            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f0c8ebcd2d2803042476949_greenarrow.png"
+                                alt="" class="arrow">
+                            <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5f0c8e5842917b4c645fd05e_teriyaki_3x_sa4pxi.png"
+                                alt="" class="img-h">
+                        </div>
+                    </div>
+                </div>
+                <!-- Cards -->
+                <div class="container-fluid text-lg-center">
+                    <!-- 4 meals card -->
+                    <div class="col-lg-2 col-12 border border-light m-card d-inline-block mb-2 mb-lg-0 mr-lg-2" data="4">
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-3 d-lg-block d-inline ">
+                                <img src="https://res.cloudinary.com/freshly/image/upload/q_auto:good,dpr_auto,f_auto,/v1494958610/updated-4-plan_uu0ijm.jpg"
+                                alt="" class="card-img d-inline-block d-lg-block img-fluid">
+                            </div>
+                            <div class="d-inline-block d-lg-block col-lg-12 col-4 d-lg-block d-inline text-center">
+                                <h3 class="my-lg-2">
+                                    <span class="h1 mb-2" id="sl-meal">4</span>
+                                    <span class="h5 d-inline text-uppercase d-lg-block">meals&nbsp;/&nbsp;week</span>
+                                </h3>
+                                <p class="">
+                                    $11.49&nbsp;/&nbsp;week
+                                </p>
+                            </div>
+
+                            <div class="my-2 d-lg-block d-none col-12">
+                                <button class="btn btn-success text-uppercase">select this plan</button>
+                            </div>
+                            <div class="col-3 float-right d-lg-none d-block my-auto"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                    <!-- 6 Meals card -->
+                    <div class="col-lg-2 col-12 border border-light m-card d-inline-block mb-2 mb-lg-0 mr-lg-2" data="6">
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-3 d-lg-block d-inline">
+                                <img src="https://res.cloudinary.com/freshly/image/upload/q_auto:good,dpr_auto,f_auto,/v1494958610/updated-6-plan_ifjrbr.jpg"
+                                alt="" class="card-img d-inline-block d-lg-block">
+                            </div>
+                            <div class="d-inline-block d-lg-block col-lg-12 col-4 d-lg-block d-inline text-center">
+                                <h1 class="my-lg-2">
+                                    <span class="h1 mb-2" id="sl-meal">6</span>
+                                    <span class="h5 d-inline text-uppercase d-lg-block">meals&nbsp;/&nbsp;week</span>
+                                </h1>
+                                <p class="">
+                                    $9.49&nbsp;/&nbsp;week
+                                </p>
+                            </div>
+
+                            <div class="my-2 d-lg-block d-none col-12">
+                                <button class="btn btn-success text-uppercase">select this plan</button>
+                            </div>
+                            <div class="col-3 float-right d-lg-none d-block my-auto"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                    <!-- 10 Meals card -->
+                    <div class="col-lg-2 col-12 border border-light m-card d-inline-block mb-2 mb-lg-0 mr-lg-2" data="10">
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-3 d-lg-block d-inline">
+                                <img src="https://res.cloudinary.com/freshly/image/upload/q_auto:good,dpr_auto,f_auto,/v1494958610/updated-8-plan_yuloqr.jpg"
+                                alt="" class="card-img d-inline-block d-lg-block">
+                            </div>
+                            <div class="d-inline-block d-lg-block col-lg-12 col-4 d-lg-block d-inline text-center">
+                                <h1 class="my-lg-2">
+                                    <span class="h1 mb-2" id="sl-meal">10</span>
+                                    <span class="h5 d-inline text-uppercase d-lg-block">meals&nbsp;/&nbsp;week</span>
+                                </h1>
+                                <p class="">
+                                    $8.99&nbsp;/&nbsp;week
+                                </p>
+                            </div>
+
+                            <div class="my-2 d-lg-block d-none col-12">
+                                <button class="btn btn-success text-uppercase">select this plan</button>
+                            </div>
+                            <div class="col-3 float-right d-lg-none d-block my-auto"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                    <!-- 12 Meals card -->
+                    <div class="col-lg-2 col-12 border border-light m-card d-inline-block mb-2 mb-lg-0" data="12">
+                        <div class="row text-center">
+                            <div class="col-lg-12 col-3 d-lg-block d-inline">
+                                <img src="https://res.cloudinary.com/freshly/image/upload/q_auto:good,dpr_auto,f_auto,/v1494958610/updated-12-plan_xgj7pt.jpg"
+                                alt="" class="card-img d-inline-block d-lg-block">
+                            </div>
+                            <div class="d-inline-block d-lg-block col-lg-12 col-4 d-lg-block d-inline text-center">
+                                <h1 class="my-lg-2">
+                                    <span class="h1 mb-2" id="sl-meal">12</span>
+                                    <span class="h5 d-inline text-uppercase d-lg-block">meals&nbsp;/&nbsp;week</span>
+                                </h1>
+                                <p class="">
+                                    $8.49&nbsp;/&nbsp;week
+                                </p>
+                            </div>
+
+                            <div class="my-2 d-lg-block d-none col-12">
+                                <button class="btn btn-success text-uppercase">select this plan</button>
+                            </div>
+                            <div class="col-3 float-right d-lg-none d-block my-auto pr-0"><i class="fas fa-chevron-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Select Days -->
+            <section class="step-tab-panel" data-step="step2">
+                <div class="container-fluid">
+                    <div class="row text-center">
+                        <div class="col-12 my-4">
+                            <h1 class="h5 text-uppercase">choose a delivery day</h1>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col col-sm-8 col-md-6 col-lg-5 col-xl-4 mx-auto">
+                            <div class="text-center" id="arrow-up">
+                                <i class="fas fa-sort-up" ></i>
+                            </div>
+            
+                            <div class="day-list">
+                                <ul class="list-group" id="day-list">
+                                </ul>
+                            </div>
+            
+                            <div class="text-center small">
+                                <p>Scroll for more delivery dates</p>
+                            </div>
+            
+                            <div class="text-center">
+                                <i class="fas fa-sort-down"></i>
+                            </div>
+            
+                            <div class="text-center my-2">
+                                <button class="btn btn-success btn-block px-5 py-2" id="day-next-btn">Next</button>
+                            </div>
+            
+                            <div class="text-center">
+                                <p><strong>First Delivery Date:&nbsp;</strong><span id="selected-date" class="small"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Select Meals -->
+            <section class="step-tab-panel" data-step="step3">
+                <div class="container-fluid">
+                    <!-- Main div -->
+                    <div class="row">
+                        <!-- Meals card section -->
+                        <div class="col-sm-9 col-12 w-100">
+                            <div class="row mx-sm-2 ml-md-2">
+                                <!-- Card -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-12 border border-light
+                                 meal-card d-inline-block mb-2 mb-sm-0 mr-sm-2 mt-2">
+                                    <div class="row text-center">
+                                        <div class="col-sm-12 col-4 d-xs-inline-block">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1608747288/production-meal-image-29fee2e7-8e88-4cd3-aad9-0e7d25671f7f.jpg"
+                                            alt="" class="card-img img-fluid">
+                                        </div>
+                                        
+                                        <div class="p-3 d-sm-inline-block col-7 col-sm-12 mx-2 ">
+                                            <div class="row">
+                                                <div class="d-inline d-sm-block col-12 text-left  mb-2 mh-111">
+                                                    <div class="meal-card-name text-uppercase mb-2">steak pepercorn</div>
+                                                    <div class="meal-card-desc">with Sautéed Carrots & French Green Beans</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-sm-4 mt-md-1">
+                                                <div class="col-7 text-left pt-2">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="meal-card-nutrition">510</div>
+                                                            <div class="meal-card-nutrition">Cals</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-lg-3 col-3">
+                                                            <div class="meal-card-nutrition">33g</div>
+                                                            <div class="meal-card-nutrition">Carbs</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-3 d-lg-none d-xl-inline d-inline col-3">
+                                                            <div class="meal-card-nutrition">29g</div>
+                                                            <div class="meal-card-nutrition">Protein</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4  meal-add-btn">
+                                                    <div class="row bg-success py-1 float-right">
+                                                        <div class="col-2 text-white mx-n1">
+                                                            <i class="fas fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-8 text-white">
+                                                            <span>ADD</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <button class="btn btn-success text-uppercase">
+                                                        <i class="fas fa-plus"></i>&nbsp;&nbsp;ADD
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-12 border border-light
+                                 meal-card d-inline-block mb-2 mb-sm-0 mr-sm-2 mt-2">
+                                    <div class="row text-center">
+                                        <div class="col-sm-12 col-4 d-xs-inline-block">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1602724105/production-meal-image-57e49562-348b-42f2-9ca6-9f40a95c8395.jpg"
+                                            alt="" class="card-img img-fluid">
+                                        </div>
+                                        
+                                        <div class="p-3 d-sm-inline-block col-7 col-sm-12 mx-2 ">
+                                            <div class="row">
+                                                <div class="d-inline d-sm-block col-12 text-left  mb-2 mh-111">
+                                                    <div class="meal-card-name text-uppercase mb-2">Cauliflower Shell Beef Bolognese</div>
+                                                    <div class="meal-card-desc">with Nonna’s Soffritto & Italian Cheeses</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-sm-4 mt-md-1">
+                                                <div class="col-7 text-left pt-2">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="meal-card-nutrition">510</div>
+                                                            <div class="meal-card-nutrition">Cals</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-lg-3 col-3">
+                                                            <div class="meal-card-nutrition">33g</div>
+                                                            <div class="meal-card-nutrition">Carbs</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-3 d-lg-none d-xl-inline d-inline col-3">
+                                                            <div class="meal-card-nutrition">29g</div>
+                                                            <div class="meal-card-nutrition">Protein</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4  meal-add-btn">
+                                                    <div class="row bg-success py-1 float-right">
+                                                        <div class="col-2 text-white mx-n1">
+                                                            <i class="fas fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-8 text-white">
+                                                            <span>ADD</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <button class="btn btn-success text-uppercase">
+                                                        <i class="fas fa-plus"></i>&nbsp;&nbsp;ADD
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-12 border border-light
+                                 meal-card d-inline-block mb-2 mb-sm-0 mr-sm-2 mt-2">
+                                    <div class="row text-center">
+                                        <div class="col-sm-12 col-4 d-xs-inline-block">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1607770959/production-meal-image-7a62bb89-9bcb-4f1f-9f0f-d8372698d48e.jpg"
+                                            alt="" class="card-img img-fluid">
+                                        </div>
+                                        
+                                        <div class="p-3 d-sm-inline-block col-7 col-sm-12 mx-2 ">
+                                            <div class="row">
+                                                <div class="d-inline d-sm-block col-12 text-left  mb-2 mh-111">
+                                                    <div class="meal-card-name text-uppercase mb-2">Protein-Packed Chicken Parm</div>
+                                                    <div class="meal-card-desc">with Mozzarella & Garlicky Broccoli </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-sm-4 mt-md-1">
+                                                <div class="col-7 text-left pt-2">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="meal-card-nutrition">510</div>
+                                                            <div class="meal-card-nutrition">Cals</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-lg-3 col-3">
+                                                            <div class="meal-card-nutrition">33g</div>
+                                                            <div class="meal-card-nutrition">Carbs</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-3 d-lg-none d-xl-inline d-inline col-3">
+                                                            <div class="meal-card-nutrition">29g</div>
+                                                            <div class="meal-card-nutrition">Protein</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4  meal-add-btn">
+                                                    <div class="row bg-success py-1 float-right">
+                                                        <div class="col-2 text-white mx-n1">
+                                                            <i class="fas fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-8 text-white">
+                                                            <span>ADD</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <button class="btn btn-success text-uppercase">
+                                                        <i class="fas fa-plus"></i>&nbsp;&nbsp;ADD
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-12 border border-light
+                                 meal-card d-inline-block mb-2 mb-sm-0 mr-sm-2 mt-2">
+                                    <div class="row text-center">
+                                        <div class="col-sm-12 col-4 d-xs-inline-block">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1602723110/production-meal-image-0a78bae3-2e0c-4ab7-b420-154ed262d4d0.jpg"
+                                            alt="" class="card-img img-fluid">
+                                        </div>
+                                        
+                                        <div class="p-3 d-sm-inline-block col-7 col-sm-12 mx-2 ">
+                                            <div class="row">
+                                                <div class="d-inline d-sm-block col-12 text-left  mb-2 mh-111">
+                                                    <div class="meal-card-name text-uppercase mb-2">Homestyle Chicken</div>
+                                                    <div class="meal-card-desc">with Masterful Mac & Cheese</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-sm-4 mt-md-1">
+                                                <div class="col-7 text-left pt-2">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="meal-card-nutrition">510</div>
+                                                            <div class="meal-card-nutrition">Cals</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-lg-3 col-3">
+                                                            <div class="meal-card-nutrition">33g</div>
+                                                            <div class="meal-card-nutrition">Carbs</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-3 d-lg-none d-xl-inline d-inline col-3">
+                                                            <div class="meal-card-nutrition">29g</div>
+                                                            <div class="meal-card-nutrition">Protein</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4  meal-add-btn">
+                                                    <div class="row bg-success py-1 float-right">
+                                                        <div class="col-2 text-white mx-n1">
+                                                            <i class="fas fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-8 text-white">
+                                                            <span>ADD</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <button class="btn btn-success text-uppercase">
+                                                        <i class="fas fa-plus"></i>&nbsp;&nbsp;ADD
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-12 border border-light
+                                 meal-card d-inline-block mb-2 mb-sm-0 mr-sm-2 mt-2">
+                                    <div class="row text-center">
+                                        <div class="col-sm-12 col-4 d-xs-inline-block">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1602721634/production-meal-image-8771fb54-2c23-4063-8007-f5024df074c2.jpg"
+                                            alt="" class="card-img img-fluid">
+                                        </div>
+                                        
+                                        <div class="p-3 d-sm-inline-block col-7 col-sm-12 mx-2 ">
+                                            <div class="row">
+                                                <div class="d-inline d-sm-block col-12 text-left  mb-2 mh-111">
+                                                    <div class="meal-card-name text-uppercase mb-2">Zingy Buffalo Chicken</div>
+                                                    <div class="meal-card-desc">with Loaded Cauliflower</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-sm-4 mt-md-1">
+                                                <div class="col-7 text-left pt-2">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="meal-card-nutrition">510</div>
+                                                            <div class="meal-card-nutrition">Cals</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-lg-3 col-3">
+                                                            <div class="meal-card-nutrition">33g</div>
+                                                            <div class="meal-card-nutrition">Carbs</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-3 d-lg-none d-xl-inline d-inline col-3">
+                                                            <div class="meal-card-nutrition">29g</div>
+                                                            <div class="meal-card-nutrition">Protein</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4  meal-add-btn">
+                                                    <div class="row bg-success py-1 float-right">
+                                                        <div class="col-2 text-white mx-n1">
+                                                            <i class="fas fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-8 text-white">
+                                                            <span>ADD</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <button class="btn btn-success text-uppercase">
+                                                        <i class="fas fa-plus"></i>&nbsp;&nbsp;ADD
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-12 border border-light
+                                 meal-card d-inline-block mb-2 mb-sm-0 mr-sm-2 mt-2">
+                                    <div class="row text-center">
+                                        <div class="col-sm-12 col-4 d-xs-inline-block">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1602723731/production-meal-image-2b1d9d32-e0de-44b4-a2c5-9c7fa22203d5.jpg"
+                                            alt="" class="card-img img-fluid">
+                                        </div>
+                                        
+                                        <div class="p-3 d-sm-inline-block col-7 col-sm-12 mx-2 ">
+                                            <div class="row">
+                                                <div class="d-inline d-sm-block col-12 text-left  mb-2 mh-111">
+                                                    <div class="meal-card-name text-uppercase mb-2">Sausage Baked Penne</div>
+                                                    <div class="meal-card-desc">with Sautéed Zucchini & Spinach</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-sm-4 mt-md-1">
+                                                <div class="col-7 text-left pt-2">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="meal-card-nutrition">510</div>
+                                                            <div class="meal-card-nutrition">Cals</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-lg-3 col-3">
+                                                            <div class="meal-card-nutrition">33g</div>
+                                                            <div class="meal-card-nutrition">Carbs</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-3 d-lg-none d-xl-inline d-inline col-3">
+                                                            <div class="meal-card-nutrition">29g</div>
+                                                            <div class="meal-card-nutrition">Protein</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4  meal-add-btn">
+                                                    <div class="row bg-success py-1 float-right">
+                                                        <div class="col-2 text-white mx-n1">
+                                                            <i class="fas fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-8 text-white">
+                                                            <span>ADD</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <button class="btn btn-success text-uppercase">
+                                                        <i class="fas fa-plus"></i>&nbsp;&nbsp;ADD
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-12 border border-light
+                                 meal-card d-inline-block mb-2 mb-sm-0 mr-sm-2 mt-2">
+                                    <div class="row text-center">
+                                        <div class="col-sm-12 col-4 d-xs-inline-block">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1602722020/production-meal-image-1a05b254-2fc5-4eec-9cec-5b1cde753c06.jpg"
+                                            alt="" class="card-img img-fluid">
+                                        </div>
+                                        
+                                        <div class="p-3 d-sm-inline-block col-7 col-sm-12 mx-2 ">
+                                            <div class="row">
+                                                <div class="d-inline d-sm-block col-12 text-left  mb-2 mh-111">
+                                                    <div class="meal-card-name text-uppercase mb-2">Chicken Livorno</div>
+                                                    <div class="meal-card-desc">with Hearty White Beans & Kale</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-sm-4 mt-md-1">
+                                                <div class="col-7 text-left pt-2">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="meal-card-nutrition">510</div>
+                                                            <div class="meal-card-nutrition">Cals</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-lg-3 col-3">
+                                                            <div class="meal-card-nutrition">33g</div>
+                                                            <div class="meal-card-nutrition">Carbs</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-3 d-lg-none d-xl-inline d-inline col-3">
+                                                            <div class="meal-card-nutrition">29g</div>
+                                                            <div class="meal-card-nutrition">Protein</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4  meal-add-btn">
+                                                    <div class="row bg-success py-1 float-right">
+                                                        <div class="col-2 text-white mx-n1">
+                                                            <i class="fas fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-8 text-white">
+                                                            <span>ADD</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <button class="btn btn-success text-uppercase">
+                                                        <i class="fas fa-plus"></i>&nbsp;&nbsp;ADD
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-12 border border-light
+                                 meal-card d-inline-block mb-2 mb-sm-0 mr-sm-2 mt-2">
+                                    <div class="row text-center">
+                                        <div class="col-sm-12 col-4 d-xs-inline-block">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1605813866/production-meal-image-1eab0dae-fb76-4485-9b1b-eaa125cae6c6.jpg"
+                                            alt="" class="card-img img-fluid">
+                                        </div>
+                                        
+                                        <div class="p-3 d-sm-inline-block col-7 col-sm-12 mx-2 ">
+                                            <div class="row">
+                                                <div class="d-inline d-sm-block col-12 text-left  mb-2 mh-111">
+                                                    <div class="meal-card-name text-uppercase mb-2">Sausage & Peppers</div>
+                                                    <div class="meal-card-desc">with Carb Swap Cauliflower Rice</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-sm-4 mt-md-1">
+                                                <div class="col-7 text-left pt-2">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="meal-card-nutrition">510</div>
+                                                            <div class="meal-card-nutrition">Cals</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-lg-3 col-3">
+                                                            <div class="meal-card-nutrition">33g</div>
+                                                            <div class="meal-card-nutrition">Carbs</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-3 d-lg-none d-xl-inline d-inline col-3">
+                                                            <div class="meal-card-nutrition">29g</div>
+                                                            <div class="meal-card-nutrition">Protein</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4  meal-add-btn">
+                                                    <div class="row bg-success py-1 float-right">
+                                                        <div class="col-2 text-white mx-n1">
+                                                            <i class="fas fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-8 text-white">
+                                                            <span>ADD</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <button class="btn btn-success text-uppercase">
+                                                        <i class="fas fa-plus"></i>&nbsp;&nbsp;ADD
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-12 border border-light
+                                 meal-card d-inline-block mb-2 mb-sm-0 mr-sm-2 mt-2">
+                                    <div class="row text-center">
+                                        <div class="col-sm-12 col-4 d-xs-inline-block">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1602724174/production-meal-image-13231efa-1905-40d4-aca2-208524d1dab1.jpg"
+                                            alt="" class="card-img img-fluid">
+                                        </div>
+                                        
+                                        <div class="p-3 d-sm-inline-block col-7 col-sm-12 mx-2 ">
+                                            <div class="row">
+                                                <div class="d-inline d-sm-block col-12 text-left  mb-2 mh-111">
+                                                    <div class="meal-card-name text-uppercase mb-2">Chicken Tikka Masala</div>
+                                                    <div class="meal-card-desc">with Seven-Spice Vegetable Biryani</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-sm-4 mt-md-1">
+                                                <div class="col-7 text-left pt-2">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="meal-card-nutrition">510</div>
+                                                            <div class="meal-card-nutrition">Cals</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-lg-3 col-3">
+                                                            <div class="meal-card-nutrition">33g</div>
+                                                            <div class="meal-card-nutrition">Carbs</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-3 d-lg-none d-xl-inline d-inline col-3">
+                                                            <div class="meal-card-nutrition">29g</div>
+                                                            <div class="meal-card-nutrition">Protein</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4  meal-add-btn">
+                                                    <div class="row bg-success py-1 float-right">
+                                                        <div class="col-2 text-white mx-n1">
+                                                            <i class="fas fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-8 text-white">
+                                                            <span>ADD</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <button class="btn btn-success text-uppercase">
+                                                        <i class="fas fa-plus"></i>&nbsp;&nbsp;ADD
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-12 border border-light
+                                 meal-card d-inline-block mb-2 mb-sm-0 mr-sm-2 mt-2">
+                                    <div class="row text-center">
+                                        <div class="col-sm-12 col-4 d-xs-inline-block">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1602724003/production-meal-image-6a799afc-b646-4bcf-88e1-4a31f844df2b.jpg"
+                                            alt="" class="card-img img-fluid">
+                                        </div>
+                                        
+                                        <div class="p-3 d-sm-inline-block col-7 col-sm-12 mx-2 ">
+                                            <div class="row">
+                                                <div class="d-inline d-sm-block col-12 text-left  mb-2 mh-111">
+                                                    <div class="meal-card-name text-uppercase mb-2">Savory-Sweet Chicken Teriyaki</div>
+                                                    <div class="meal-card-desc">with Brown Rice & Veggies</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-sm-4 mt-md-1">
+                                                <div class="col-7 text-left pt-2">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="meal-card-nutrition">510</div>
+                                                            <div class="meal-card-nutrition">Cals</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-lg-3 col-3">
+                                                            <div class="meal-card-nutrition">33g</div>
+                                                            <div class="meal-card-nutrition">Carbs</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-3 d-lg-none d-xl-inline d-inline col-3">
+                                                            <div class="meal-card-nutrition">29g</div>
+                                                            <div class="meal-card-nutrition">Protein</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4  meal-add-btn">
+                                                    <div class="row bg-success py-1 float-right">
+                                                        <div class="col-2 text-white mx-n1">
+                                                            <i class="fas fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-8 text-white">
+                                                            <span>ADD</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <button class="btn btn-success text-uppercase">
+                                                        <i class="fas fa-plus"></i>&nbsp;&nbsp;ADD
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-12 border border-light
+                                 meal-card d-inline-block mb-2 mb-sm-0 mr-sm-2 mt-2">
+                                    <div class="row text-center">
+                                        <div class="col-sm-12 col-4 d-xs-inline-block">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1602723128/production-meal-image-f7317cfb-b5f0-456b-a3a8-a6a6b123ba44.jpg"
+                                            alt="" class="card-img img-fluid">
+                                        </div>
+                                        
+                                        <div class="p-3 d-sm-inline-block col-7 col-sm-12 mx-2 ">
+                                            <div class="row">
+                                                <div class="d-inline d-sm-block col-12 text-left  mb-2 mh-111">
+                                                    <div class="meal-card-name text-uppercase mb-2">Pulled Pork Al Pastor</div>
+                                                    <div class="meal-card-desc">with Cotija Cheese & Mexican-Style Corn</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-sm-4 mt-md-1">
+                                                <div class="col-7 text-left pt-2">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="meal-card-nutrition">510</div>
+                                                            <div class="meal-card-nutrition">Cals</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-lg-3 col-3">
+                                                            <div class="meal-card-nutrition">33g</div>
+                                                            <div class="meal-card-nutrition">Carbs</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-3 d-lg-none d-xl-inline d-inline col-3">
+                                                            <div class="meal-card-nutrition">29g</div>
+                                                            <div class="meal-card-nutrition">Protein</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4  meal-add-btn">
+                                                    <div class="row bg-success py-1 float-right">
+                                                        <div class="col-2 text-white mx-n1">
+                                                            <i class="fas fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-8 text-white">
+                                                            <span>ADD</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <button class="btn btn-success text-uppercase">
+                                                        <i class="fas fa-plus"></i>&nbsp;&nbsp;ADD
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card -->
+                                <div class="col-lg-3 col-md-4 col-sm-5 col-12 border border-light
+                                 meal-card d-inline-block mb-2 mb-sm-0 mr-sm-2 mt-2">
+                                    <div class="row text-center">
+                                        <div class="col-sm-12 col-4 d-xs-inline-block">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1602723269/production-meal-image-0e5c1b0a-7c87-4b3d-a476-3065980a3f2f.jpg"
+                                            alt="" class="card-img img-fluid">
+                                        </div>
+                                        
+                                        <div class="p-3 d-sm-inline-block col-7 col-sm-12 mx-2 ">
+                                            <div class="row">
+                                                <div class="d-inline d-sm-block col-12 text-left  mb-2 mh-111">
+                                                    <div class="meal-card-name text-uppercase mb-2">Golden Oven-Fried Chicken & Mash</div>
+                                                    <div class="meal-card-desc">with Roasted Sweet Corn</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mt-sm-4 mt-md-1">
+                                                <div class="col-7 text-left pt-2">
+                                                    <div class="row">
+                                                        <div class="col-3">
+                                                            <div class="meal-card-nutrition">510</div>
+                                                            <div class="meal-card-nutrition">Cals</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-lg-3 col-3">
+                                                            <div class="meal-card-nutrition">33g</div>
+                                                            <div class="meal-card-nutrition">Carbs</div>
+                                                        </div>
+                                                        <div class="border-left border-light mr-3 d-lg-none d-xl-inline d-inline col-3">
+                                                            <div class="meal-card-nutrition">29g</div>
+                                                            <div class="meal-card-nutrition">Protein</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-4  meal-add-btn">
+                                                    <div class="row bg-success py-1 float-right">
+                                                        <div class="col-2 text-white mx-n1">
+                                                            <i class="fas fa-plus"></i>
+                                                        </div>
+                                                        <div class="col-8 text-white">
+                                                            <span>ADD</span>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <button class="btn btn-success text-uppercase">
+                                                        <i class="fas fa-plus"></i>&nbsp;&nbsp;ADD
+                                                    </button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Selected Meals section -->
+                        <div class="col-3 border-left border-light bg-lite pr-0">
+                            <div class="row">
+                                <div class="col-12 p-2 text-center">
+
+                                    <!-- Flip Div -->
+                                    <div class="row text-center border-bottom border-light" id="flip">
+                                        <div class="col-12 text-left">
+                                            My Delivery for:
+                                        </div>
+                                        <div class="text-left fw-700 col-12" id="sl-meal-day">  
+                                        </div>
+
+                                        <div class="col-12 mx-auto mt-1">
+                                            <button class="btn btn-success btn-block" id="meal-next-btn">Next</button>
+                                            <p id="text-left">
+                                                <i class="fas fa-exclamation text-red"></i>&nbsp;
+                                                <span id="meal-warning"></span> Meals to continue.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Toast -->
+                                        <div role="alert" aria-live="assertive" aria-atomic="true" class="toast hide" data-autohide="false">
+                                            <div class="toast-body text-white bg-dark">
+                                                    <span id="meal-warning-toast"></span> Meals to continue.
+                                                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                                                        <span aria-hidden="true"><i class="fas fa-times text-white"></i></span>
+                                                    </button>
+                                            </div>
+                                        </div>
+
+                                </div>
+                            </div>
+                            <!-- Selected items List -->
+                            <div class="row bg-light mh-480 mt-n2">
+                                <div class="col-12" id="sl-item-list">
+                                    <div class="row" id="add-item">
+                                        <div class="col-12 text-center mt-2" id="empty-cart-label">
+                                            Get started by adding your meals.
+                                        </div>
+                                    </div>
+                                    <!-- <div class="row sl-meal">
+                                        <div class="col-3">
+                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1602724105/production-meal-image-57e49562-348b-42f2-9ca6-9f40a95c8395.jpg"
+                                            alt="" width="60px" height="60px">
+                                        </div>
+                                        <div class="col-7 pt-3 text-left sl-meal-label">
+                                            Name of the product
+                                        </div>
+                                        <div class="col-2 pt-3 ">
+                                            <i class="fas fa-times cursor-pointer sl-meal-remove"></i>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                            <!-- Meal selected item bottom div -->
+                            <div class="row bg-light mh-50">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-6 text-left">
+                                            <span id="sl-totl-meal"></span>
+                                            &nbsp;/&nbsp;
+                                            <span id="totl-meal"></span>
+                                        </div>
+                                        <div class="col-6 text-right cursor-pointer">
+                                            <button type="button" class="btn btn-link text-uppercase" id="clear-all">Clear All</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Checkout -->
+            <section class="step-tab-panel" data-step="step4">
+                <div class="row">
+                    <div class="container">
+                        <div class="col-5">
+                            <div class="row">
+                                CheckOut
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="step-footer text-right d-none">
+            <button data-step-action="prev" class="step-btn" id="prev">Previous</button>
+            <button data-step-action="next" class="step-btn" id="next">Next</button>
+            <button data-step-action="finish" class="step-btn">Finish</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
