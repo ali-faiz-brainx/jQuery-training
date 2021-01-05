@@ -15,8 +15,10 @@ $(document).ready(function(){
         if(currDay==0){
             console.log(moment().add(1, 'days').calendar());
             var mainList=document.getElementById('day-list');
+            let checkout_day_list=document.getElementById('sl-checkout-date');
             for(let i=0;i<10;i++){
                 var li=document.createElement("li");
+                let opt=document.createElement("option");
                 if(i==0){
                     li.className="list-group-item day-list-item item-selected";
                 }
@@ -31,6 +33,7 @@ $(document).ready(function(){
                     console.log($("#selected-date").text());
                     $('#sl-meal-day').text($(this).text());
                     console.log($('#sl-meal-date').text());
+                    opt.selected=true;
                 });
                 var strong=document.createElement("strong");
                 strong.appendChild(document.createTextNode(moment().add(1, 'weeks')
@@ -38,17 +41,27 @@ $(document).ready(function(){
                 var span=document.createElement("span");
                 span.appendChild(document.createTextNode(moment().add(1, 'weeks')
                 .add(i, 'days').format(", MMM D")));
+
+                opt.appendChild(document.createTextNode(moment().add(1, 'weeks').subtract((7-(7-currDay)-1), "days")
+                .add(i, 'days').format("dddd, MMM D")));
+                
+                opt.value=moment().add(1, 'weeks').subtract((7-(7-currDay)-1), "days")
+                .add(i, 'days').format("dddd, MMM D");
+
                 li.appendChild(strong);
                 li.appendChild(span);
                 mainList.appendChild(li);
+                checkout_day_list.appendChild(opt);
             }
         }
         else{
             console.log(currDay);
             console.log(moment().add(1, 'weeks').subtract((7-(7-currDay)-1), "days").format("MMM Do YY"));
             var mainList=document.getElementById('day-list');
+            let checkout_day_list=document.getElementById('sl-checkout-date');
             for(let i=0;i<10;i++){
                 var li=document.createElement("li");
+                let opt=document.createElement("option");
                 if(i==0){
                     li.className="list-group-item day-list-item item-selected";
                 }
@@ -61,6 +74,7 @@ $(document).ready(function(){
                     $('#selected-date').text($(this).text());
                     console.log($(this).text());
                     $('#sl-meal-day').text($(this).text());
+                    opt.selected=true;
 
                 });
                 var strong=document.createElement("strong");
@@ -69,9 +83,17 @@ $(document).ready(function(){
                 var span=document.createElement("span");
                 span.appendChild(document.createTextNode(moment().add(1, 'weeks').subtract((7-(7-currDay)-1), "days")
                 .add(i, 'days').format(", MMM D")));
+
+                opt.appendChild(document.createTextNode(moment().add(1, 'weeks').subtract((7-(7-currDay)-1), "days")
+                .add(i, 'days').format("dddd, MMM D")));
+
+                opt.value=moment().add(1, 'weeks').subtract((7-(7-currDay)-1), "days")
+                .add(i, 'days').format("dddd, MMM D");
+
                 li.appendChild(strong);
                 li.appendChild(span);
                 mainList.appendChild(li);
+                checkout_day_list.appendChild(opt);
             }
         }
         console.log(selectedPlan);
@@ -79,6 +101,7 @@ $(document).ready(function(){
         $('#meal-warning-toast').text('Add '+selectedPlan);
         $('#sl-totl-meal').text(orgSelectedMeal);
         $('#totl-meal').text(selectedPlan);
+        $('#total-meal-checkout').text(selectedPlan);
         $('#selected-date').text(moment().add(1, 'weeks').subtract((7-(7-currDay)-1), "days").format("dddd, MMM D"));
         $('#sl-meal-day').text(moment().add(1, 'weeks').subtract((7-(7-currDay)-1), "days").format("dddd, MMM D"));
         $('#next').click();
@@ -168,8 +191,8 @@ $(document).ready(function(){
                 console.log(orgSelectedMeal);
                 if(orgSelectedMeal==0){
                     $('#empty-cart-label').addClass('d-block');
-                    $('#meal-warning').text('Add 0');
-                    $('#meal-warning-toast').text('Add 0');
+                    $('#meal-warning').text('Add '+selectedPlan);
+                    $('#meal-warning-toast').text('Add '+selectedPlan);
                     $('#sl-totl-meal').text(orgSelectedMeal);
                 }
                 else if(orgSelectedMeal>selectedPlan){

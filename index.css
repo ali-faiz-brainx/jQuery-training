@@ -227,6 +227,15 @@ body{
     overflow: hidden;
 }
 
+.form-fields{
+    border: 1px solid #666;
+    transition: 0.5s;
+}
+
+.form-fields:focus{
+    outline: 4px solid #739d73;
+}
+
 @media only screen and (max-width: 520px) {
     .img-h{
         height: 100px;
