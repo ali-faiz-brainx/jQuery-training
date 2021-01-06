@@ -21,6 +21,9 @@ body{
     text-align: left;
     background-color: #fff;
 }
+.faq-q{
+    color: #030;
+}
 
 .heading-3{
     font-family: GoodHeadlineProCondMedium,Helvetica Neue,Helvetica,Arial,sans-serif;
