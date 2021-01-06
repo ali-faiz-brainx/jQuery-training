@@ -21,8 +21,20 @@ body{
     text-align: left;
     background-color: #fff;
 }
+
 .faq-q{
+    background-color: transparent;
+}
+
+.card-header a{
+    text-decoration: none !important;
     color: #030;
+    font-size: 1.45rem !important;
+    font-weight: 700 !important;
+}
+
+.card-header a:hover{
+    color:#07872B;
 }
 
 .heading-3{
