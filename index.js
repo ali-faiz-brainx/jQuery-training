@@ -2,6 +2,7 @@ var selectedPlan;
 var counter_vePlan;
 var selectedDate;
 var orgSelectedMeal=0;
+var sl_meals_list=[];
 
 $(document).ready(function(){
     $("#freshly-main-div").steps({
@@ -128,13 +129,24 @@ $(document).ready(function(){
             $('.toast').toast('show'); 
         }
         else{
+            var checkout_meals=document.getElementsByClassName('sl-checkout-meal')
+            for(let i=0;i<sl_meals_list.length;i++){
+                let temp=document.getElementsByClassName('checkout-sl-meal')[0];
+                temp.content.getElementById('sl-meal-qty').innerHTML=sl_meals_list[i]['count'];
+                temp.content.getElementById('temp-checkout-img').src=sl_meals_list[i]['img'];
+                temp.content.getElementById('temp-checkout-name').innerHTML=sl_meals_list[i]['name'];
+                temp.content.getElementById('temp-checkout-desc').innerHTML=sl_meals_list[i]['desc'];
+
+                let clon = temp.content.cloneNode(true);
+                console.log(clon);
+                document.getElementById('sl-checkout-meal').appendChild(clon);
+            }
             $('#next').click();
         }
          
     });
     $('.meal-add-btn').click(function(){
         orgSelectedMeal++;
-        console.log(orgSelectedMeal);
         counter_vePlan--;
         if(orgSelectedMeal==0){
             $('#empty-cart-label').removeClass('d-none');
@@ -167,6 +179,25 @@ $(document).ready(function(){
         img.setAttribute('width','60px');
         img.setAttribute('height','60px');
         img.src=$(this).parentsUntil(".meal-card").find('.card-img').attr('src');
+        let prod_id=$(this).parents(".meal-card").attr('id');
+        console.log("id->"+prod_id);
+        let product_added=false;
+        for(let i=0;i<sl_meals_list.length;i++){
+            if(sl_meals_list[i]["id"]==prod_id){
+                sl_meals_list[i]["count"]++;
+                product_added=true;
+            }
+        }
+
+        if(!product_added){
+            sl_meals_list.push({
+                'id':prod_id,
+                'img':$(this).parentsUntil(".meal-card").find('.card-img').attr('src'),
+                'name':$(this).parentsUntil(".meal-card").find('.meal-card-name').text(),
+                'desc':$(this).parentsUntil('.meal-card').find('.meal-card-desc').text(),
+                'count':1
+            });
+        }
         
 
         // Append image to its div
@@ -206,6 +237,22 @@ $(document).ready(function(){
                     $('#meal-warning').text('Add '+(selectedPlan-orgSelectedMeal));
                     $('#meal-warning-toast').text('Add '+(selectedPlan-orgSelectedMeal));
                     $('#sl-totl-meal').text(orgSelectedMeal);
+                }
+                
+                let prod_flag=false;
+                // let prod_id=$(this).parents(".meal-card").attr('id');
+                for(let i=0;i<sl_meals_list.length;i++){
+                    if(sl_meals_list[i]["id"]==prod_id){
+                        if(sl_meals_list[i]["count"]>1){
+                            --sl_meals_list[i]["count"];
+                            console.log(sl_meals_list[i]);
+                        }
+                        else{
+                            console.log(sl_meals_list[i]);
+                            sl_meals_list.splice(i, 1);
+                        }
+                        break;
+                    }
                 }
                 
                 mainDiv.remove();
