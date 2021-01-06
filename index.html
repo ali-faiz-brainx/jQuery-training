@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="jquery-steps.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.steps@1.1.1/dist/jquery-steps.min.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 
     <!-- Roboto Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -33,7 +33,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery.steps@1.1.1/dist/jquery-steps.min.js"></script>
 
     <!-- Index js -->
-    <script src="index.js"></script>
+    <script src="assets/js/index.js"></script>
     
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -845,8 +845,8 @@
                                         <div class="col-12 mx-auto mt-1">
                                             <button class="btn btn-success btn-block" id="meal-next-btn">Next</button>
                                             <p id="text-left">
-                                                <i class="fas fa-exclamation text-red"></i>&nbsp;
-                                                <span id="meal-warning"></span> Meals to continue.
+                                                <i class="fas fa-exclamation text-red" id="warning-icon"></i>&nbsp;
+                                                <span id="meal-warning"></span>
                                             </p>
                                         </div>
                                     </div>
@@ -854,7 +854,7 @@
                                     <!-- Toast -->
                                         <div role="alert" aria-live="assertive" aria-atomic="true" class="toast hide" data-autohide="false">
                                             <div class="toast-body text-white bg-dark">
-                                                    <span id="meal-warning-toast"></span> Meals to continue.
+                                                    <span id="meal-warning-toast"></span>
                                                     <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
                                                         <span aria-hidden="true"><i class="fas fa-times text-white"></i></span>
                                                     </button>
@@ -871,18 +871,6 @@
                                             Get started by adding your meals.
                                         </div>
                                     </div>
-                                    <!-- <div class="row sl-meal">
-                                        <div class="col-3">
-                                            <img src="https://res.cloudinary.com/freshly/image/upload/c_scale,w_640/c_crop,h_341,w_512/v1602724105/production-meal-image-57e49562-348b-42f2-9ca6-9f40a95c8395.jpg"
-                                            alt="" width="60px" height="60px">
-                                        </div>
-                                        <div class="col-7 pt-3 text-left sl-meal-label">
-                                            Name of the product
-                                        </div>
-                                        <div class="col-2 pt-3 ">
-                                            <i class="fas fa-times cursor-pointer sl-meal-remove"></i>
-                                        </div>
-                                    </div> -->
                                 </div>
                             </div>
                             <!-- Meal selected item bottom div -->
@@ -890,7 +878,7 @@
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-6 text-left">
-                                            <span id="sl-totl-meal"></span>
+                                            <span id="sl-totl-meal" class="text-danger"></span>
                                             &nbsp;/&nbsp;
                                             <span id="totl-meal"></span>
                                         </div>
@@ -1010,7 +998,7 @@
                                                         <div class="col-12 mt-3">
                                                             <input type="checkbox" class="" checked>
                                                             <label for="checkbox">Receive SMS text message updates on my orders</label>
-                                                            <i class="fal fa-info-circle"></i>
+                                                            <i class="fa fa-info-circle"></i>
                                                         </div>
                                                     </div>
         
@@ -1130,6 +1118,107 @@
             <button data-step-action="prev" class="step-btn" id="prev">Previous</button>
             <button data-step-action="next" class="step-btn" id="next">Next</button>
             <button data-step-action="finish" class="step-btn">Finish</button>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center text-uppercase heading-3">
+                    <h3>Common Questions</h3>
+                </div>
+                <div class="accordion md-accordion col-12" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+                    <!-- Accordion card -->
+                    <div class="card">
+                  
+                      <!-- Card header -->
+                      <div class="card-header" role="tab" id="headingOne1">
+                        <a class="collapsed text-dark-50" data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1"
+                          aria-expanded="false" aria-controls="collapseTwo1">
+                          <h5 class="my-0 faq-q">
+                            <span class="">Collapsible Group Item #2</span>  <i class="fas fa-angle-down rotate-icon float-right text-success"></i>
+                          </h5>
+                        </a>
+                      </div>
+                  
+                      <!-- Card body -->
+                      <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                        data-parent="#accordionEx">
+                        <div class="card-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                          wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                          eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                          assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                          nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                          farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                          labore sustainable VHS.
+                        </div>
+                      </div>
+                  
+                    </div>
+                    <!-- Accordion card end-->
+                  
+                    <!-- Accordion card -->
+                    <div class="card">
+                  
+                      <!-- Card header -->
+                      <div class="card-header" role="tab" id="headingTwo2">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+                          aria-expanded="false" aria-controls="collapseTwo2">
+                          <h5 class="my-0">
+                            Collapsible Group Item #2 <i class="fas fa-angle-down rotate-icon"></i>
+                          </h5>
+                        </a>
+                      </div>
+                  
+                      <!-- Card body -->
+                      <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+                        data-parent="#accordionEx">
+                        <div class="card-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                          wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                          eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                          assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                          nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                          farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                          labore sustainable VHS.
+                        </div>
+                      </div>
+                  
+                    </div>
+                    <!-- Accordion card end-->
+                  
+                    <!-- Accordion card -->
+                    <div class="card">
+                  
+                      <!-- Card header -->
+                      <div class="card-header" role="tab" id="headingThree3">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseThree3"
+                          aria-expanded="false" aria-controls="collapseThree3">
+                          <h5 class="my-0">
+                            Collapsible Group Item #3 <i class="fas fa-angle-down rotate-icon"></i>
+                          </h5>
+                        </a>
+                      </div>
+                  
+                      <!-- Card body -->
+                      <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                        data-parent="#accordionEx">
+                        <div class="card-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
+                          wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
+                          eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
+                          assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
+                          nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                          farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                          labore sustainable VHS.
+                        </div>
+                      </div>
+                  
+                    </div>
+                    <!-- Accordion card end-->
+                  
+                  </div>
+                <hr>
+            </div>
         </div>
     </div>
 

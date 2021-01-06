@@ -1,6 +1,6 @@
 @font-face{
     font-family: GoodHeadlineProCondMedium;
-    src: url(InriaSans-Regular.ttf);
+  src: url(InriaSans-Regular.ttf);
 }
 
 .heading{
@@ -20,17 +20,6 @@ body{
     color: #030;
     text-align: left;
     background-color: #fff;
-}
-
-
-
-.faq-q{
-    font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-size: 1.45rem !important;
-    font-weight: 500 !important;
-    line-height: 1.5;
-    text-decoration: none;
-    color: #030 !important;
 }
 
 .heading-3{
