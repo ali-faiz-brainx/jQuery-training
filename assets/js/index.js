@@ -5,10 +5,13 @@ var orgSelectedMeal=0;
 var sl_meals_list=[];
 
 $(document).ready(function(){
+    // Jquery Steps
     $("#freshly-main-div").steps({
         transitionEffect: "slideLeft",
        
     });
+
+    // Select Meals Qty i.e 4, 6, 10, 12
     $('.m-card').click(function(){
         selectedPlan=$(this).attr('data');
         var currDate=new Date();
@@ -111,21 +114,14 @@ $(document).ready(function(){
         counter_vePlan=selectedPlan;
         // window.location.href = "day.html";
     });
+
+    // Select day click next button
     $('#day-next-btn').click(function(){
 
         $("#next").click();
     });
-    // $('#meal-next-btn').mouseenter(function(){
-    //     if(orgSelectedMeal!=selectedPlan){
-    //         $(this).css('opacity', 0.4);
-    //         $(this).css('cursor', 'no-drop');
-    //     }
-    //     else{
-    //         $(this).css('opacity', 1);
-    //         $(this).css('cursor', 'pointer');
-    //     }
-        
-    // });
+
+
     $('#meal-next-btn').click(function(){
         if(orgSelectedMeal<selectedPlan || orgSelectedMeal>selectedPlan){
             $('.toast').toast('show'); 
@@ -147,6 +143,8 @@ $(document).ready(function(){
         }
          
     });
+
+    // Add Meals to cart
     $('.meal-add-btn').click(function(){
         orgSelectedMeal++;
         counter_vePlan--;
@@ -348,6 +346,7 @@ $(document).ready(function(){
         console.log($(this).parentsUntil(".meal-card").find('.card-img').attr('src'));
     });
 
+    // Empty Cart
     $('#clear-all').click(function(){
         $('.sl-meal').remove();
         sl_meals_list=[];
@@ -363,83 +362,13 @@ $(document).ready(function(){
         $('#empty-cart-label').addClass('d-block');
     });
 
-    $("#q1-flip").click(function(){
-        $("#q1-panel").slideToggle("slow");
-      });
+    $('#add-promo').click(function(){
+        // alert("promo code")
+        $(this).addClass('d-none');
+        $('#promo-code-prt').removeClass('d-none');
+        $('#promo-code-prt').addClass('d-block');
+    });
     
 });
 
-function removeAddedProduct(){
-    if(orgSelectedMeal>0){
-        orgSelectedMeal--;
-        console.log(orgSelectedMeal);
-        if(orgSelectedMeal==0){
-            $('#meal-next-btn').removeClass('enabled-btn');
-            $('#meal-next-btn').addClass('disabled-btn');
-            $('#empty-cart-label').addClass('d-block');
-            $('#warning-icon').removeClass('fa-check');
-            $('#warning-icon').removeClass('text-primary');
-            $('#warning-icon').addClass('fa-exclamation');
-            $('#warning-icon').addClass('text-danger');
-            $('#meal-warning').text('Add '+selectedPlan+' Meals to continue.');
-            $('#meal-warning-toast').text('Add '+selectedPlan+' Meals to continue.');
-            $('#sl-totl-meal').text(orgSelectedMeal);
-        }
-        else if(orgSelectedMeal>selectedPlan){
-            $('#meal-next-btn').removeClass('enabled-btn');
-            $('#meal-next-btn').addClass('disabled-btn');
-            $('#meal-warning').text('Remove '+(orgSelectedMeal-selectedPlan)+' Meals to continue.');
-            $('#meal-warning-toast').text('Remove '+(orgSelectedMeal-selectedPlan)+' Meals to continue.');
-            $('#warning-icon').removeClass('fa-check');
-            $('#warning-icon').removeClass('text-primary');
-            $('#warning-icon').addClass('fa-exclamation');
-            $('#warning-icon').addClass('text-danger');
-            $('#sl-totl-meal').text(orgSelectedMeal);
-        }
-        else if(orgSelectedMeal==selectedPlan){
-            $('#meal-next-btn').removeClass('disabled-btn');
-            $('#meal-next-btn').addClass('enabled-btn');
-            $('#empty-cart-label').removeClass('d-block');
-            $('#empty-cart-label').addClass('d-none');
-            $('#warning-icon').removeClass('fa-exclamation');
-            $('#warning-icon').removeClass('text-danger');
-            $('#warning-icon').addClass('fa-check');
-            $('#warning-icon').addClass('text-primary');
-            $('#meal-warning').text('All Set');
-            $('#meal-warning-toast').text('All Set');
-            $('#sl-totl-meal').text(orgSelectedMeal);
-        }
-        else{
-            $('#meal-next-btn').removeClass('enabled-btn');
-            $('#meal-next-btn').addClass('disabled-btn');
-            $('#empty-cart-label').removeClass('d-block');
-            $('#empty-cart-label').addClass('d-none');
-            $('#warning-icon').removeClass('fa-check');
-            $('#warning-icon').removeClass('text-primary');
-            $('#warning-icon').addClass('fa-exclamation');
-            $('#warning-icon').addClass('text-danger');
-            $('#meal-warning').text('Add '+(selectedPlan-orgSelectedMeal)+' Meals to continue.');
-            $('#meal-warning-toast').text('Add '+(selectedPlan-orgSelectedMeal)+' Meals to continue.');
-            $('#sl-totl-meal').text(orgSelectedMeal);
-        }
-        
-        let prod_flag=false;
-        // let prod_id=$(this).parents(".meal-card").attr('id');
-        for(let i=0;i<sl_meals_list.length;i++){
-            if(sl_meals_list[i]["id"]==prod_id){
-                if(sl_meals_list[i]["count"]>1){
-                    --sl_meals_list[i]["count"];
-                    console.log(sl_meals_list[i]);
-                }
-                else{
-                    console.log(sl_meals_list[i]);
-                    sl_meals_list.splice(i, 1);
-                }
-                break;
-            }
-        }
-        
-        mainDiv.remove();
-        
-    }
-}
+

@@ -932,13 +932,13 @@
                                                     </div>
                                                     <div class="row mt-1">
                                                         <div class="col-12 w-100">
-                                                            <input type="text" class="py-2 w-100">
+                                                            <input type="text" class="py-2 w-100 form-fields cursor-no-drop" disabled>
                                                         </div>
                                                     </div>
         
                                                     <div class="row">
                                                         <div class="col-12 mt-3">
-                                                            <input type="checkbox" class="">
+                                                            <input type="checkbox" class="form-fields">
                                                             <label for="checkbox">My Delivery Name Address is same as my First and Last Name.</label>
                                                         </div>
                                                     </div>
@@ -948,7 +948,7 @@
                                                     </div>
                                                     <div class="row mt-1">
                                                         <div class="col-12 w-100">
-                                                            <input type="text" class="py-2 w-100">
+                                                            <input type="text" class="py-2 w-100 form-fields">
                                                         </div>
                                                     </div>
         
@@ -957,7 +957,7 @@
                                                     </div>
                                                     <div class="row mt-2">
                                                         <div class="col-12 w-100">
-                                                            <input type="text" class="py-2 w-100">
+                                                            <input type="text" class="py-2 w-100 form-fields">
                                                         </div>
                                                     </div>
         
@@ -975,13 +975,13 @@
         
                                                     <div class="row">
                                                         <div class="col-5">
-                                                            <input type="text" class="w-100 py-2">
+                                                            <input type="text" class="w-100 py-2 form-fields">
                                                         </div>
                                                         <div class="col-4">
-                                                            <input type="text" class="w-100 py-2">
+                                                            <input type="text" class="w-100 py-2 form-fields">
                                                         </div>
                                                         <div class="col-3">
-                                                            <input type="text" class="w-100 py-2">
+                                                            <input type="text" class="w-100 py-2 form-fields cursor-no-drop" value="90001" disabled>
                                                         </div>
                                                     </div>
         
@@ -990,13 +990,13 @@
                                                     </div>
                                                     <div class="row mt-2">
                                                         <div class="col-12 w-100">
-                                                            <input type="number" class="py-2 w-100">
+                                                            <input type="number" class="py-2 w-100 form-fields">
                                                         </div>
                                                     </div>
         
                                                     <div class="row">
                                                         <div class="col-12 mt-3">
-                                                            <input type="checkbox" class="" checked>
+                                                            <input type="checkbox" class="form-fields" checked>
                                                             <label for="checkbox">Receive SMS text message updates on my orders</label>
                                                             <i class="fa fa-info-circle"></i>
                                                         </div>
@@ -1007,7 +1007,7 @@
                                                     </div>
                                                     <div class="row mt-2">
                                                         <div class="col-12 w-100">
-                                                            <input type="number" class="py-2 w-100" value="null">
+                                                            <input type="number" class="py-2 w-100 form-fields" value="null">
                                                         </div>
                                                     </div>
         
@@ -1046,13 +1046,17 @@
                                         <div class="col-12 text-black-50 border">
                                             <div class="row">
                                                 <div class="col-12 w-100 ">
-                                                    <button type="button" class="btn btn-link text-success"><u>+ Add Promo Code</u></button>
-                                                    <div class="row d-none">
-                                                        <div class="col-7">
-                                                            <input type="text" placeholder="Promo Code" class="w-100 py-2">
-                                                        </div>
-                                                        <div class="col-5">
-                                                            <button type="button" class="btn btn-outline-success btn-block px-3">Apply</button>
+                                                    <button type="button" class="btn btn-link text-success" id="add-promo"><u>+ Add Promo Code</u></button>
+                                                    <div class="row d-none" id="promo-code-prt">
+                                                        <div class="col-12 pt-1">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <input type="text" placeholder="Promo Code" class="w-100 py-2 form-fields">
+                                                                </div>
+                                                                <div class="col-5">
+                                                                    <button type="button" class="btn btn-outline-success btn-block px-3">Apply</button>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1063,7 +1067,7 @@
                                                     Delivery Date
                                                 </div>
                                                 <div class="col-12 mt-1">
-                                                    <select name="days" id="sl-checkout-date" class="py-2 w-100 cursor-pointer"></select>
+                                                    <select name="days" id="sl-checkout-date" class="py-2 w-100 cursor-pointer form-fields"></select>
                                                 </div>
                                             </div>
                                             <hr>
@@ -1096,7 +1100,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <hr>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -1134,7 +1137,7 @@
                         <a class="collapsed " data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1"
                           aria-expanded="false" aria-controls="collapseTwo1">
                           <h5 class="my-0 ">
-                            <span class="">How many portions are your meals?</span>
+                            <span class="text-bolder">How many portions are your meals?</span>
                             <i class="fas fa-angle-down rotate-icon float-right text-success"></i>
                           </h5>
                         </a>
@@ -1267,7 +1270,7 @@
     </div>
 
     <template class="checkout-sl-meal">
-        <div class="row sl-meal  mt-1">
+        <div class="row sl-meal  border border-light py-1">
             <div class="col-1 my-auto">
                 <span id="sl-meal-qty">3</span>
             </div>
@@ -1280,7 +1283,6 @@
                 <span class="d-block meal-card-desc text-success" id="temp-checkout-desc">Description of product</span>
             </div>
         </div>
-        <hr>
     </template>
 
 

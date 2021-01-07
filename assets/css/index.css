@@ -39,8 +39,8 @@ body{
 
 .heading-3{
     font-family: GoodHeadlineProCondMedium,Helvetica Neue,Helvetica,Arial,sans-serif;
-    font-weight: 900;
-    font-size: 27px;
+    font-weight: 900 !important;
+    font-size: 27px !important;
 }
 
 .display-1{
@@ -52,8 +52,13 @@ body{
 }
 
 .cursor-pointer{
-    cursor: pointer;
+    cursor: pointer !important;
 }
+
+.cursor-no-drop{
+    cursor: no-drop !important;
+}
+
 .sl-meal{
     font-family: Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
     transition: 0.3s;
@@ -258,7 +263,7 @@ body{
 }
 
 .form-fields:focus{
-    outline: 4px solid #739d73;
+    outline: 3px solid #739d73;
 }
 
 .faqs:hover{
