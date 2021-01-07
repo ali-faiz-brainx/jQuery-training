@@ -159,7 +159,7 @@ body{
 }
 
 .img-cover{
-    object-fit: cover;
+    object-fit: cover !important;
 }
 
 .day-list{
