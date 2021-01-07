@@ -207,6 +207,7 @@ $(document).ready(function(){
         imgDiv.className="col-3";
         // img element
         var img=document.createElement("img");
+        img.className="img-cover";
         img.setAttribute('width','60px');
         img.setAttribute('height','60px');
         img.src=$(this).parentsUntil(".meal-card").find('.card-img').attr('src');

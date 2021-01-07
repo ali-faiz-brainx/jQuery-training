@@ -95,17 +95,19 @@ body{
     transition: 0.5s;
 }
 
-.day-list-item:focus{
-    outline: 0;
-    box-shadow: 0 0 0 0.2rem rgba(7,135,43,.25);
-}
+
 
 .day-list-item:focus ,.day-list-item:hover{
     z-index: 2;
     cursor: pointer;
+    border-bottom: 3px solid rgba(175,174,174,0.2);
     transform: translateX(5px);
 }
 
+.day-list-item:focus{
+    outline: 3px solid #739d73 !important;
+    box-shadow: 0 0 0 0.2rem rgba(7,135,43,.25);
+}
 
 .day-list-item::before{
     position: absolute;
@@ -154,6 +156,10 @@ body{
     object-fit: cover;
     border-top-left-radius: calc(.25rem - 1px);
     border-top-right-radius: calc(.25rem - 1px);
+}
+
+.img-cover{
+    object-fit: cover;
 }
 
 .day-list{
